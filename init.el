@@ -169,3 +169,6 @@
 ;;; no-byte-compile: t
 ;;; End:
 (put 'erase-buffer 'disabled nil)
+
+(setq debug-on-error t)
+
