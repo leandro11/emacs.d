@@ -8,6 +8,7 @@
     ;; run command `pip install jedi flake8 importmagic` in shell,
     ;; or just check https://github.com/jorgenschaefer/elpy
     (elpy-mode 1)
+    (add-to-list 'company-backends 'company-jedi)
     ;; http://emacs.stackexchange.com/questions/3322/python-auto-indent-problem/3338#3338
     ;; emacs 24.4 only
     (setq electric-indent-chars (delq ?: electric-indent-chars))
@@ -26,8 +27,8 @@
 
 ;; enable autopep8 formatting on save
 (require 'py-autopep8)
-(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
-(setq py-autopep8-options '("--max-line-length=100"))
+;(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+(setq py-autopep8-options '("--max-line-length=120"))
 
 ;; Standard Jedi.el setting
 (add-hook 'python-mode-hook 'jedi:setup)
