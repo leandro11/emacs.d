@@ -70,6 +70,8 @@
   (when (boundp 'company-backends)
     (make-local-variable 'company-backends)
     (add-to-list 'company-backends 'company-ispell)
+    ;; english-words.txt is the fallback dicitonary
+    (setq ispell-alternate-dictionary (file-truename "~/.emacs.d/misc/english-words.txt"))
     (setq company-ispell-dictionary ispell-alternate-dictionary)))
 
 ;; message-mode use company-bbdb.
