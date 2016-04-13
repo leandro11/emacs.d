@@ -9,6 +9,8 @@
     ;; or just check https://github.com/jorgenschaefer/elpy
     (elpy-mode 1)
     (company-mode -1)
+    (define-key evil-normal-state-map (kbd "M-.") 'elpy-goto-definition)
+    (define-key python-mode-map (kbd "M-,") 'pop-tag-mark)
     ;(add-to-list 'company-backends 'company-jedi)
     ;; http://emacs.stackexchange.com/questions/3322/python-auto-indent-problem/3338#3338
     ;; emacs 24.4 only
